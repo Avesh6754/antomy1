@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             color: Colors.blue)),
               TextSpan(text: '  Line  ',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700,backgroundColor: Colors.green,color: Colors.white)),
               TextSpan(text: '  Multiple ',style: TextStyle(
-                  fontSize: 30,fontWeight:FontWeight.w400,
+                  fontSize: 30,fontWeight:FontWeight.w300,
                   color: Colors.amber)) ,
               TextSpan(text: 'Style',style: TextStyle(
                   fontSize: 30,fontWeight:FontWeight.w400,
