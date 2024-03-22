@@ -12,19 +12,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       home: Scaffold(
+  // backgroundColor: Colors.black,
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Rich Text Example ",
+          title: const Text("Flutter Rich Text",
             style: TextStyle(
+              letterSpacing: 1,
+              fontWeight: FontWeight.w500,
               color: Colors.white,
-              
+              fontSize:25
+
             ),
           ),
           backgroundColor: Colors.blue,
-          leading: Icon(Icons.menu,color: Colors.white,),
+          leading:const Icon(Icons.menu,color: Colors.white,),
 
-    actions: [
+    actions: const [
     Padding(
     padding: EdgeInsets.only(right: 20),
     child: Icon(
@@ -33,19 +38,20 @@ class MyApp extends StatelessWidget {
           )),
           ],
         ),
-        body: Center(
+        body:const Center(
+
           child: Text.rich(TextSpan(
             children: [
-              TextSpan(text:'Single  ',style: TextStyle(
-            fontSize: 25,fontWeight:FontWeight.bold,
-            color: Colors.blue)),
-              TextSpan(text: '  Line  ',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700,backgroundColor: Colors.green,color: Colors.white)),
-              TextSpan(text: '  Multiple ',style: TextStyle(
-                  fontSize: 30,fontWeight:FontWeight.w300,
-                  color: Colors.amber)) ,
-              TextSpan(text: 'Style',style: TextStyle(
-                  fontSize: 30,fontWeight:FontWeight.w400,
-                  color: Colors.pink,fontStyle: FontStyle.italic)),
+              TextSpan(text:'Rich Text helps to create\n',style: TextStyle(
+                fontSize: 27,color: Colors.black54
+              )),
+              TextSpan(text: 'Highlighted',style: TextStyle(fontSize:55,fontWeight: FontWeight.bold,color: Colors.red,fontStyle:FontStyle.italic)),
+              TextSpan(text: ',\n',style: TextStyle(fontSize:30,color: Colors.black45)),
+              TextSpan(text: 'Clickable',style: TextStyle(fontSize:35,color: Colors.blue,decoration:TextDecoration.underline,decorationColor: Colors.blue)),
+              TextSpan(text: ',',style: TextStyle(fontSize:30,color: Colors.black45)),
+              TextSpan(text: 'OutlinedText',style: TextStyle(fontSize:30,color: Colors.green,)),
+              TextSpan(text: '.\n',style: TextStyle(fontSize:30,color: Colors.black45,)),
+              TextSpan(text: '    Say Hi to Rich Text',style: TextStyle(fontSize:30,color: Colors.black45,)),
 
             ]
           )),
